@@ -16,11 +16,5 @@ RUN apt-get install php-curl -y
 RUN apt-get install php-xml -y
 RUN apt-get install php-zip -y
 RUN apt-get install curl
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install nodejs
-RUN useradd -m composeruser
-USER root
-WORKDIR /var/www/html
-USER root
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 #ENTRYPOINT ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
